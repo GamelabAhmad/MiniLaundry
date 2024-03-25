@@ -1,0 +1,41 @@
+.center-both {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+body {
+    padding-top: 70px;
+}
+.dalneg{
+    background-color: rgba(230, 230, 230, 1);
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+.dalnegtx{
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    font-size: larger;
+    text-decoration: none;
+}
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Menetapkan z-index untuk menampilkan tombol di atas konten lain */
+    background-color: #28a745;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+}
