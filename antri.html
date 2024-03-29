@@ -27,9 +27,26 @@
         </i>&ensp;Antrian</a>
         </div>
         <div class="container">
-            <button class="floating-button" onclick="window.location.href = 'tambahantri.html';"><i class="fa-solid fa-plus"></i></button>
-            <div style="height: 2000px;">
+            <button class="floating-button" id="btn-tambah" onclick="window.location.href = 'tambahantri.html';"><i class="fa-solid fa-plus"></i></button>
+            <div>
             Scroll down...
+            <div class="container">
+              <h1>Antrian</h1>
+              <table id="antrian-table">
+                <thead>
+                  <tr>
+                    <th>Nama</th>
+                    <th>Tanggal</th>
+                    <th>Berat</th>
+                    <th>Alamat</th>
+                  </tr>
+                </thead>
+                <tbody id="antrian-body"></tbody>
+              </table>
+            </div>
+            <script src="antrian.js"></script>
+
+
             </div>
         </div>
     </body>
