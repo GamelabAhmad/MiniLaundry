@@ -26,5 +26,52 @@
             <a class="dalnegtx" href="javascript:history.back()"><i class="fa-solid fa-chevron-left" style="color: #030303;">
         </i>&ensp;Tambah Data Pelanggan</a>
         </div>
+        <div class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama Pelanggan</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan nama">
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <input type="text" class="form-control" id="alamat" placeholder="Masukkan alamat" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="map" class="form-label">Titik Lokasi</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="map" placeholder="Pilih titik lokasi di peta" readonly>
+                        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#mapModal"><i class="fas fa-map-marked-alt"></i></button>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="telp1" class="form-label">Nomor Telepon 1</label>
+                    <input type="text" class="form-control" id="telp1" placeholder="Masukkan nomor telepon 1">
+                </div>
+                <div class="mb-3">
+                    <label for="telp2" class="form-label">Nomor Telepon 2 (Opsional)</label>
+                    <input type="text" class="form-control" id="telp2" placeholder="Opsional">
+                </div>
+                <button type="submit" class="btn btn-success">Tambah Data</button>
+            </form>
+        </div>        
+        
+    
+        <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mapModalLabel">Pilih Titik Lokasi</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Placeholder untuk peta</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-primary">Simpan Lokasi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
