@@ -24,19 +24,31 @@
         </script>
         <div class="container-fluid dalneg">                   
             <a class="dalnegtx" href="javascript:history.back()"><i class="fa-solid fa-chevron-left" style="color: #030303;">
-        </i>&ensp;Data Pelanggan</a>
+        </i>&ensp;Data Karyawan</a>
         </div>
         <div class="container">
-            <button class="floating-button" onclick="window.location.href = 'tambahdapel.html';"><i class="fa-solid fa-plus"></i></button>
+            <button class="floating-button" onclick="checkPassword()"><i class="fa-solid fa-plus"></i></button>
+            <script>
+            function checkPassword() {
+                var password = prompt("Masukkan kata sandi:");
+                if (password === 'laundry') {
+                    alert("Kata sandi benar")
+                    window.location.href = 'regkar.html';
+                } else {
+                    alert("Kata sandi salah. Silakan coba lagi.");
+                }
+                }
+                </script>
+
             <div style="height: 2000px;">
                 <div class="container">
-                    <h2>Data Pelanggan</h2>
+                    <h2>Data Karyawan</h2>
                     <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Alamat</th>
+                                <th scope="col">Nama Karyawan</th>
+                                <th scope="col">Username</th>
                                 <th scope="col">Telepon</th>
                             </tr>
                         </thead>
@@ -44,16 +56,15 @@
                             <tr>
                                 <th scope="row">1</th>
                                 <td>John Doe</td>
-                                <td>123 Main Street</td>
+                                <td>Jhon</td>
                                 <td>123-456-7890</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>Jane Smith</td>
-                                <td>456 Elm Street</td>
+                                <td>Jane</td>
                                 <td>098-765-4321</td>
                             </tr>
-                            <!-- Tambahkan data dummy lainnya di sini -->
                         </tbody>
                     </table>
                 </div>

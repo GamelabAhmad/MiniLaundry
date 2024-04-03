@@ -24,41 +24,35 @@
         </script>
         <div class="container-fluid dalneg">                   
             <a class="dalnegtx" href="javascript:history.back()"><i class="fa-solid fa-chevron-left" style="color: #030303;">
-        </i>&ensp;Data Pelanggan</a>
+        </i>&ensp;Tambah Data Pelanggan</a>
         </div>
         <div class="container">
-            <button class="floating-button" onclick="window.location.href = 'tambahdapel.html';"><i class="fa-solid fa-plus"></i></button>
-            <div style="height: 2000px;">
-                <div class="container">
-                    <h2>Data Pelanggan</h2>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Alamat</th>
-                                <th scope="col">Telepon</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>John Doe</td>
-                                <td>123 Main Street</td>
-                                <td>123-456-7890</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jane Smith</td>
-                                <td>456 Elm Street</td>
-                                <td>098-765-4321</td>
-                            </tr>
-                            <!-- Tambahkan data dummy lainnya di sini -->
-                        </tbody>
-                    </table>
+            <form id="karyawanForm" action="dakar.html" method="POST" onsubmit="showPopup()">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama Karyawan</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama">
                 </div>
-                
-            </div>
-        </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Masukkan Username">
+                </div>
+                <div class="mb-3">
+                    <label for="telepon" class="form-label">Telepon</label>
+                    <input type="text" class="form-control" id="telepon" placeholder="Masukkan Telepon" >
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Masukkan Password">
+                </div>
+                <button type="submit" class="btn btn-success">Tambah Data</button>
+            </form>
+
+            <script>
+                function showPopup() {
+                    alert('Karyawan berhasil ditambahkan!');
+                }
+            </script>
+
+        </div>        
     </body>
 </html>
