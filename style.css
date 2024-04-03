@@ -98,3 +98,217 @@ container {
   button:hover {
     background-color: #0056b3;
   }
+
+  
+  .card {
+    width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .card h3 {
+    margin-top: 0;
+  }
+
+  .card p {
+    margin: 5px 0;
+  }
+  
+ 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+  /* Clearfix to prevent cards from wrapping */
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Button styling */
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #e92020;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn.delete {
+    background-color: #18f359;
+  }
+
+  .btn.edit {
+    background-color: #ffc107; /* Warna kuning */
+    margin-right: 5px;
+  }
+  
+.center-both {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+body {
+    padding-top: 70px;
+}
+.dalneg{
+    background-color: rgba(230, 230, 230, 1);
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+.dalnegtx{
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    font-size: larger;
+    text-decoration: none;
+}
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Menetapkan z-index untuk menampilkan tombol di atas konten lain */
+    background-color: #28a745;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+}
+
+container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #queue {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .rekap-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+  .rekap-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .rekap-table th, .rekap-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .rekap-table th {
+    background-color: #f6f6f6;
+  }
+  
+  .rekap-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .rekap-table tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  @media (max-width: 768px) {
+    .rekap-container {
+      padding: 20px;
+    }
+    
+    .rekap-table th, .rekap-table td {
+      padding: 12px;
+    }
+  }
