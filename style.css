@@ -98,3 +98,59 @@ container {
   button:hover {
     background-color: #0056b3;
   }
+
+  
+  .card {
+    width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .card h3 {
+    margin-top: 0;
+  }
+
+  .card p {
+    margin: 5px 0;
+  }
+  
+ 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+  /* Clearfix to prevent cards from wrapping */
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Button styling */
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #e92020;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn.delete {
+    background-color: #00834c;
+    margin-right: 5px;
+  }
+
+  .btn.edit {
+    background-color: #ffc107; /* Warna kuning */
+    margin-right: 5px;
+  }
+  

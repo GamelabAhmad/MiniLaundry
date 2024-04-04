@@ -32,10 +32,11 @@
     <div>
       <div class="container">
         <section class="data-antrian">
-          <h1>Data Antrian</h1>
+          <h1>Data Antrian Online</h1>
           <div id="antrian-container" class="container"></div>
-
-
+          <hr>
+          <h1>Data Antrian Self Servis</h1>
+          <div id="self-servis-container" class="container"></div>
           <script>
             // Dummy 
             //deklarasi variabel antrianData sebagai array yang berisi data antrian.
@@ -151,6 +152,146 @@
 
             // Memanggil fungsi generateCards untuk menghasilkan tampilan awal kartu-kartu antrian ketika halaman dimuat pertama kali.
             generateCards(antrianData);
+
+            //self servis
+            let selfServisData = [
+              {
+                id: 1,
+                mesin: "Mesin A",
+                nama: "",
+                alamat: "",
+                telepon: "",
+                batas_waktu: "",
+                status: "Kosong"
+              },
+              {
+                id: 2,
+                mesin: "Mesin B",
+                nama: "Jane Smith",
+                alamat: "Jl. Tes No. 456",
+                telepon: "08543210987",
+                batas_waktu: "2024-04-05",
+                status: "Booking"
+              },
+              {
+                id: 3,
+                mesin: "Mesin C",
+                nama: "Alice Johnson",
+                alamat: "Jl. Uji Coba No. 789",
+                telepon: "08765432109",
+                batas_waktu: "2024-04-06",
+                status: "Diisi"
+              },
+              {
+                id: 4,
+                mesin: "Mesin D",
+                nama: "",
+                alamat: "",
+                telepon: "",
+                batas_waktu: "",
+                status: "Kosong"
+              },
+              {
+                id: 5,
+                mesin: "Mesin E",
+                nama: "",
+                alamat: "",
+                telepon: "",
+                batas_waktu: "",
+                status: "Kosong"
+              },
+              {
+                id: 6,
+                mesin: "Mesin F",
+                nama: "Alice Johnson",
+                alamat: "Jl. Uji Coba No. 789",
+                telepon: "08765432109",
+                batas_waktu: "2024-04-06",
+                status: "Diisi"
+              },
+              // Tambahkan data antrian self-servis sesuai kebutuhan
+            ];
+
+            // Fungsi untuk menghasilkan kartu untuk setiap entri dalam data antrian self-servis
+            function generateSelfServisCards(data) {
+  const container = document.getElementById("self-servis-container");
+  container.innerHTML = ""; // Bersihkan konten sebelumnya
+
+  data.forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    // Menentukan warna teks dan latar belakang berdasarkan status
+    let textColor = "";
+    let backgroundColor = "";
+    switch (item.status) {
+      case "Kosong":
+        textColor = "white";
+        backgroundColor = "#00834c";
+        break;
+      case "Booking":
+        textColor = "white";
+        backgroundColor = "#ffc107";
+        break;
+      case "Diisi":
+        textColor = "white";
+        backgroundColor = "red";
+        break;
+      default:
+        textColor = "white";
+        backgroundColor = "white";
+    }
+
+    card.innerHTML = `
+      <h3>ID: ${item.id}</h3>
+      <p>Mesin: ${item.mesin}</p>
+      <p>Nama: ${item.nama}</p>
+      <p>Alamat: ${item.alamat}</p>
+      <p>Telepon: ${item.telepon}</p>
+      <p>Batas Waktu: ${item.batas_waktu}</p>
+      <p>Status: <span style="color: ${textColor}; background-color: ${backgroundColor};">${item.status}</span></p>
+      <button class="btn edit" onclick="editSelfServisData(${item.id})">Edit</button>
+      <button class="btn delete" onclick="deleteSelfServisData(${item.id})">Hapus</button>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+            // Fungsi edit data antrian self-servis
+            function editSelfServisData(id) {
+              const index = selfServisData.findIndex(item => item.id === id);
+              if (index !== -1) {
+                const newData = prompt("Masukkan data baru (mesin, nama, alamat, telepon, batas_waktu, status), dipisahkan dengan koma (,)", `${selfServisData[index].mesin},${selfServisData[index].nama},${selfServisData[index].alamat},${selfServisData[index].telepon},${selfServisData[index].batas_waktu},${selfServisData[index].status}`);
+                if (newData) {
+                  const newDataArray = newData.split(",");
+                  selfServisData[index] = {
+                    id: id,
+                    mesin: newDataArray[0],
+                    nama: newDataArray[1],
+                    alamat: newDataArray[2],
+                    telepon: newDataArray[3],
+                    batas_waktu: newDataArray[4],
+                    status: newDataArray[5]
+                  };
+                  generateSelfServisCards(selfServisData);
+                }
+              } else {
+                alert("Data tidak ditemukan");
+              }
+            }
+
+            // Fungsi delete data antrian self-servis
+            function deleteSelfServisData(id) {
+              const confirmation = confirm("Apakah Anda yakin?");
+              if (confirmation) {
+                selfServisData = selfServisData.filter(item => item.id !== id);
+                generateSelfServisCards(selfServisData);
+              }
+            }
+
+            // Panggil fungsi generateSelfServisCards untuk menampilkan data antrian self-servis
+            generateSelfServisCards(selfServisData);
           </script>
       </div>
     </div>
