@@ -1,35 +1,35 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Mini Laundry</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://kit.fontawesome.com/91d51d03ee.js" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <style>
-            /* CSS untuk mengatur tata letak gambar-gambar mesin cuci */
-            #form-container {
-                display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
-                align-items: center; /* Mengatur input dan gambar-gambar mesin cuci berada di tengah-tengah vertikal */
-            }
-            #input-container {
-                margin-right: 20px; /* Memberikan jarak antara input dengan gambar-gambar mesin cuci */
-            }
-            #mesin-cuci-container {
-                display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
-                flex-wrap: wrap; /* Mengatur gambar-gambar mesin cuci berada di dalam baris yang sama */
-            }
-            #mesin-cuci-container img {
-                margin-right: 10px; /* Memberikan jarak antara gambar-gambar mesin cuci */
-                max-width: 150px; /* Mengatur lebar maksimum gambar */
-                height: auto; /* Menyesuaikan ketinggian gambar */
-            }
-        </style>
-    </head>
-    <body>
-        <div id="navbar-placeholder"></div>
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Mini Laundry</title>
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <script src="https://kit.fontawesome.com/91d51d03ee.js" crossorigin="anonymous"></script>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            <style>
+                /* CSS untuk mengatur tata letak gambar-gambar mesin cuci */
+                #form-container {
+                    display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
+                    align-items: center; /* Mengatur input dan gambar-gambar mesin cuci berada di tengah-tengah vertikal */
+                }
+                #input-container {
+                    margin-right: 20px; /* Memberikan jarak antara input dengan gambar-gambar mesin cuci */
+                }
+                #mesin-cuci-container {
+                    display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
+                    flex-wrap: wrap; /* Mengatur gambar-gambar mesin cuci berada di dalam baris yang sama */
+                }
+                #mesin-cuci-container img {
+                    margin-right: 10px; /* Memberikan jarak antara gambar-gambar mesin cuci */
+                    max-width: 150px; /* Mengatur lebar maksimum gambar */
+                    height: auto; /* Menyesuaikan ketinggian gambar */
+                }
+            </style>
+        </head>
+        <body>
+            <div id="navbar-placeholder"></div>
         <script>
         const navbarPlaceholder = document.getElementById('navbar-placeholder');
         const xhr = new XMLHttpRequest();
@@ -41,209 +41,241 @@
         };
         xhr.send();
         </script>
-                <!-- Mobile Menu -->
-                <div class="col-12">
-                    <div class="mobile_menu d-block d-lg-none"></div>
-                </div>
-            </div>
+        <div class="container-fluid dalneg">                   
+            <a class="dalnegtx" href="javascript:history.back()"><i class="fa-solid fa-chevron-left" style="color: #030303;">
+        </i>&ensp;Home</a>
         </div>
-        <!-- Header End -->
-    </header>
-    <main>
-        <!--? Hero Start -->
-        <!-- Hero End -->
-        <!--?  Contact Area start  -->
-        <section>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <form class="form-contact contact_form" onsubmit="return showPopup()">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="nama_pelanggan" class="contact-title">Nama Pelanggan</label>
-                                        <input class="form-control" name="nama_pelanggan" id="nama_pelanggan" type="text" placeholder="Masukan Nama Pelanggan">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="alamat" class="contact-title">Alamat</label>
-                                        <input class="form-control" name="alamat" id="alamat" type="text" placeholder="Masukan Alamat">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="telepon" class="contact-title">Telepon</label>
-                                        <input class="form-control" name="telepon" id="telepon" type="text" placeholder="Masukan Telepon">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="jenis_pelayanan" class="contact-title">Jenis Pelayanan</label>
-                                        <div>
-                                            <button type="button" class="btn btn-primary" onclick="selectService('Self service')" style="background-color: #00834c;">Self service</button>
-                                            <button type="button" class="btn btn-primary" onclick="selectService('Antar jemput')" style="background-color: #00834c;">Antar jemput</button>
-                                            <input type="hidden" name="jenis_pelayanan" id="jenis_pelayanan">
-                                        </div>
-                                    </div>
-                                    <div id="mesin-cuci-container"></div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group mt-3">
-                                        <button type="submit" class="btn btn-primary" style="background-color: #00834c;" >Send</button>
-                                    </div>
-                                    <br>
-                                </div>
-                            </div>
-                        </form>
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Contact Area End -->
-    </main>
-    <div id="footer-placeholder"></div>
-        <script>
-        const footerPlaceholder = document.getElementById('footer-placeholder');
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'footer.html', true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                footerPlaceholder.innerHTML = xhr.responseText;
-            }
-        };
-        xhr.send();
-        </script>
-
-    <footer
-            class="text-center text-lg-start text-white"
-            style="background-color: #292d30"
+            <!-- Header End -->
+        </header>
+        <main>
+            <!--? Hero Start -->
+            <!-- Hero End -->
+            <!--?  Contact Area start  -->
+            <section>
+                <h1>Pesanan</h1>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <form class="form-contact contact_form" onsubmit="return showPopup()">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <h3 for="nama_pelanggan" class="contact-title">Nama Pelanggan</h3>
+                                            <input class="form-control" name="nama_pelanggan" id="nama_pelanggan" type="text" value="Jhon Doe" placeholder="Kemal Abdul Aziz" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <h3 for="alamat" class="contact-title">Alamat</h3>
+                                            <input class="form-control" name="alamat" id="alamat" type="text" value="123 Main Street" placeholder="Bandung" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <h3 for="telepon" class="contact-title">Telepon</h3>
+                                            <input class="form-control" name="telepon" id="telepon" type="text" value="123-456-7890" placeholder="0897654321" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <h3 for="jenis_pelayanan" class="contact-title">Jenis Pelayanan</h3>
+                                            <div>
+                                                <button type="button" class="btn btn-primary" onclick="selectService('Self service')" value="Self service" style="background-color: #00834c;">Self service</button>
+                                                <button type="button" class="btn btn-primary" onclick="selectService('Antar jemput')" value="Antar jemput" style="background-color: #00834c;">Antar jemput</button>
+                                                <input type="hidden" name="jenis_pelayanan" id="jenis_pelayanan">
+                                            </div>
+                                        </div>
+                                        <div id="mesin-cuci-container"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <h3 for="metode_pembayaran" class="contact-title">Metode Pembayaran</h3>
+                                            <div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="metode_pembayaran" id="metode_pembayaran1" value="Transfer Bank" checked>
+                                                    <label class="form-check-label" for="metode_pembayaran1">
+                                                        Transfer Bank
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="metode_pembayaran" id="metode_pembayaran2" value="Kartu Kredit">
+                                                    <label class="form-check-label" for="metode_pembayaran2">
+                                                        Cash On Delivery
+                                                    </label>
+                                                </div>
+                                                <!-- Tambahkan pilihan radio untuk metode pembayaran lainnya sesuai kebutuhan -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="form-group mt-3">
+                                            <button type="submit" class="btn btn-success" >Pesan</button>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Area End -->
+        </main>
+        <footer
+                class="text-center text-lg-start text-white"
+                style="background-color: #292d30"
+                >
+        <section
+            class="d-flex justify-content-between p-4 text-white"
+            style="background-color: #00834c"
             >
-    <section
-        class="d-flex justify-content-between p-4 text-white"
-        style="background-color: #00834c"
-        >
 
-        <div class="me-5">
-        <span>Kunjungi juga sosial media kami:</span>
-        </div>
-        <div>
-        <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-        </a>
-        </div>
-    </section>
-    <section class="">
-        <div class="text-center text-md-start mt-5">
-        <div class="row mt-3">
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold">Mini Laundry</h6>
-            <hr
-            class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p>
-                Mini Laundry adalah sebuah usaha mikro, kecil, dan menengah (UMKM) yang bergerak di bidang jasa pencucian pakaian. Berdiri atas dasar pemahaman akan kebutuhan masyarakat akan layanan pencucian yang efisien, praktis, dan berkualitas.
-            </p>
+            <div class="me-5">
+            <span>Kunjungi juga sosial media kami:</span>
             </div>
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold">Useful links</h6>
-            <hr
+            <div>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+            </a>
+            </div>
+        </section>
+        <section class="">
+            <div class="text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">Mini Laundry</h6>
+                <hr
                 class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p>
-                <a href="home.html" class="text-white">Home</a>
-            </p>
-            <p>
-                <a href="service.html" class="text-white">Pelayanan</a>
-            </p>
-            <p>
-                <a href="price.html" class="text-white">Daftar Harga</a>
-            </p>
-            <p>
-                <a href="pesanan.html" class="text-white">Pesan sekarang</a>
-            </p>
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p>
+                    Mini Laundry adalah sebuah usaha mikro, kecil, dan menengah (UMKM) yang bergerak di bidang jasa pencucian pakaian. Berdiri atas dasar pemahaman akan kebutuhan masyarakat akan layanan pencucian yang efisien, praktis, dan berkualitas.
+                </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Useful links</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p>
+                    <a href="home.html" class="text-white">Home</a>
+                </p>
+                <p>
+                    <a href="service.html" class="text-white">Pelayanan</a>
+                </p>
+                <p>
+                    <a href="price.html" class="text-white">Daftar Harga</a>
+                </p>
+                <p>
+                    <a href="pesanan.html" class="text-white">Pesan sekarang</a>
+                </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold">Contact</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p><i class="fas fa-home mr-3"></i> Jakarta, Indonesia</p>
+                <p><i class="fas fa-envelope mr-3"></i> karyawan@milaun.com</p>
+                <p><i class="fas fa-phone mr-3"></i> + 62 895 396 087 717(WA)</p>
+                <p><i class="fas fa-print mr-3"></i> + 62 234 567</p>
+                </div>
             </div>
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <h6 class="text-uppercase fw-bold">Contact</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-                />
-            <p><i class="fas fa-home mr-3"></i> Jakarta, Indonesia</p>
-            <p><i class="fas fa-envelope mr-3"></i> karyawan@milaun.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 62 895 396 087 717(WA)</p>
-            <p><i class="fas fa-print mr-3"></i> + 62 234 567</p>
             </div>
+        </section>
+
+        <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+            >
+            © Kelompok 2 BE5
         </div>
-        </div>
-    </section>
+        </footer>
 
-    <div
-        class="text-center p-3"
-        style="background-color: rgba(0, 0, 0, 0.2)"
-        >
-        © Kelompok 2 BE5
-    </div>
-    </footer>
+        <script>
+            function selectService(service) {
+        document.getElementById('jenis_pelayanan').value = service;
 
-    <script>
-        function selectService(service) {
-    document.getElementById('jenis_pelayanan').value = service;
-
-    if (service === 'Self service') {
-        var container = document.getElementById('mesin-cuci-container');
-        container.innerHTML = '<div style="display: flex;">' +
-            '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 1"></figure>' +
-            '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 2"></figure>' +
-            '<button id="selfservice1" onclick="selectMachine(\'selfservice1\', event)" style="background-color: transparent; border: none;"><img src="assets/img/selfservice1.png" alt="Mesin Cuci 3"></button>' +
-            '<button id="selfservice2" onclick="selectMachine(\'selfservice2\', event)" style="background-color: transparent; border: none;"><img src="assets/img/selfservice1.png" alt="Mesin Cuci 4"></button>' +
-            '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 5"></figure>' +
-            '</div>';
-    } else if (service === 'Antar jemput') {
-        var container = document.getElementById('mesin-cuci-container');
-        container.innerHTML = '<div style="display: flex;">' +
-            '<button id="basic" onclick="selectMachine(\'basic\', event)" style="background-color: transparent; border: none;"><img src="assets/img/basic.png" alt="Basic"></button>' +
-            '<button id="standard" onclick="selectMachine(\'standard\', event)" style="background-color: transparent; border: none;"><img src="assets/img/standard.png" alt="Standard"></button>' +
-            '<button id="premium" onclick="selectMachine(\'premium\', event)" style="background-color: transparent; border: none;"><img src="assets/img/premium.png" alt="Premium"></button>' +
-            '</div>';
-    } else {
-        document.getElementById('mesin-cuci-container').innerHTML = '';
+        if (service === 'Self service') {
+            var container = document.getElementById('mesin-cuci-container');
+            container.innerHTML = '<div style="display: flex;">' +
+                '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 1"></figure>' +
+                '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 2"></figure>' +
+                '<button id="selfservice1" onclick="selectMachine(\'selfservice1\', event)" style="background-color: transparent; border: none;"><img src="assets/img/selfservice1.png" alt="Mesin Cuci 3"></button>' +
+                '<button id="selfservice2" onclick="selectMachine(\'selfservice2\', event)" style="background-color: transparent; border: none;"><img src="assets/img/selfservice1.png" alt="Mesin Cuci 4"></button>' +
+                '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 5"></figure>' +
+                '</div>';
+        } else if (service === 'Antar jemput') {
+            var container = document.getElementById('mesin-cuci-container');
+            container.innerHTML = '<div style="display: flex;">' +
+                '<button id="basic" onclick="selectMachine(\'basic\', event)" style="background-color: transparent; border: none;"><img src="assets/img/basic.png" alt="Basic"></button>' +
+                '<button id="standard" onclick="selectMachine(\'standard\', event)" style="background-color: transparent; border: none;"><img src="assets/img/standard.png" alt="Standard"></button>' +
+                '<button id="premium" onclick="selectMachine(\'premium\', event)" style="background-color: transparent; border: none;"><img src="assets/img/premium.png" alt="Premium"></button>' +
+                '</div>';
+        } else {
+            document.getElementById('mesin-cuci-container').innerHTML = '';
+        }
     }
+
+            
+            function resetButtonColors() {
+                var buttons = document.querySelectorAll('#mesin-cuci-container button');
+                buttons.forEach(function(button) {
+                    button.style.backgroundColor = 'transparent'; // Setel warna latar belakang ke semula
+                });
+            }
+            
+            function selectMachine(machine, event) {
+                event.preventDefault(); // Mencegah perilaku default tombol
+                
+                resetButtonColors(); // Atur semua tombol ke warna aslinya terlebih dahulu
+                
+                var selectedMachine = document.getElementById(machine);
+                selectedMachine.style.backgroundColor = "blue"; // Ubah warna latar belakang menjadi biru
+            }
+            function showPopup() {
+                // Ambil nilai input dari formulir
+                var namaPelanggan = document.getElementById('nama_pelanggan').value;
+                var alamat = document.getElementById('alamat').value;
+    var telepon = document.getElementById('telepon').value;
+    var jenisPelayanan = document.getElementById('jenis_pelayanan').value;
+    var metodePembayaran = document.querySelector('input[name="metode_pembayaran"]:checked').value;
+
+    // Simpan nilai-nilai ke dalam Local Storage
+    localStorage.setItem('namaPelanggan', namaPelanggan);
+    localStorage.setItem('alamat', alamat);
+    localStorage.setItem('telepon', telepon);
+    localStorage.setItem('jenisPelayanan', jenisPelayanan);
+    localStorage.setItem('metodePembayaran', metodePembayaran);
+
+    alert("Pesanan Anda Sedang Diproses! Terima Kasih");
+    // Redirect pengguna ke halaman status.html
+    window.location.href = "status.html";
+
+    // Kembalikan nilai false untuk mencegah pengiriman formulir
+    return false;
 }
 
-        
-        function resetButtonColors() {
-            var buttons = document.querySelectorAll('#mesin-cuci-container button');
-            buttons.forEach(function(button) {
-                button.style.backgroundColor = 'transparent'; // Setel warna latar belakang ke semula
-            });
-        }
-        
-        function selectMachine(machine, event) {
-            event.preventDefault(); // Mencegah perilaku default tombol
-            
-            resetButtonColors(); // Atur semua tombol ke warna aslinya terlebih dahulu
-            
-            var selectedMachine = document.getElementById(machine);
-            selectedMachine.style.backgroundColor = "blue"; // Ubah warna latar belakang menjadi biru
-        }
-        function showPopup() {
-            alert("Terima kasih sudah memesan!");
-            window.location.href = "home.html";
-            return false;
-        }
-        </script>
-</body>
-</html>
+
+            </script>
+    </body>
+    </html>
