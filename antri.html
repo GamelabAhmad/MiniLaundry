@@ -204,8 +204,8 @@ hr {
             // Memanggil fungsi generateCards untuk menghasilkan tampilan awal kartu-kartu antrian ketika halaman dimuat pertama kali.
             generateCards(antrianData);
 
-            //self servis
-            let selfServisData = [
+          //self servis
+          let selfServisData = [
               {
                 mesin: "Mesin A",
                 nama: "",
@@ -278,7 +278,7 @@ hr {
       <p>Telepon: ${item.telepon}</p>
       <p>Batas Waktu: ${item.batas_waktu}</p>
       <p>Status: <span style="color: ${textColor}; background-color: ${backgroundColor};">${item.status}</span></p>
-      <button class="btn edit" onclick="editSelfServisData(${item.id})">Edit</button>
+      <button class="btn edit" onclick="editSelfServisData(${data.indexOf(item)})">Edit</button>
     `;
 
     container.appendChild(card);
@@ -286,27 +286,26 @@ hr {
 }
 
             // Fungsi edit data antrian self-servis
-            function editSelfServisData(id) {
-              const index = selfServisData.findIndex(item => item.id === id);
-              if (index !== -1) {
-                const newData = prompt("Masukkan data baru (mesin, nama, alamat, telepon, batas_waktu, status), dipisahkan dengan koma (,)", `${selfServisData[index].mesin},${selfServisData[index].nama},${selfServisData[index].alamat},${selfServisData[index].telepon},${selfServisData[index].batas_waktu},${selfServisData[index].status}`);
-                if (newData) {
-                  const newDataArray = newData.split(",");
-                  selfServisData[index] = {
-                    id: id,
-                    mesin: newDataArray[0],
-                    nama: newDataArray[1],
-                    alamat: newDataArray[2],
-                    telepon: newDataArray[3],
-                    batas_waktu: newDataArray[4],
-                    status: newDataArray[5]
-                  };
-                  generateSelfServisCards(selfServisData);
-                }
-              } else {
-                alert("Data tidak ditemukan");
-              }
-            }
+            function editSelfServisData(index) {
+  if (index !== -1) {
+    const newData = prompt("Masukkan data baru (mesin, nama, alamat, telepon, batas_waktu, status), dipisahkan dengan koma (,)", `${selfServisData[index].mesin},${selfServisData[index].nama},${selfServisData[index].alamat},${selfServisData[index].telepon},${selfServisData[index].batas_waktu},${selfServisData[index].status}`);
+    if (newData) {
+      const newDataArray = newData.split(",");
+      selfServisData[index] = {
+        mesin: newDataArray[0],
+        nama: newDataArray[1],
+        alamat: newDataArray[2],
+        telepon: newDataArray[3],
+        batas_waktu: newDataArray[4],
+        status: newDataArray[5]
+      };
+      generateSelfServisCards(selfServisData);
+    }
+  } else {
+    alert("Data tidak ditemukan");
+  }
+}
+
 
             // Fungsi delete data antrian self-servis
             function deleteSelfServisData(id) {
