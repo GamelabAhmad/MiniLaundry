@@ -41,9 +41,9 @@
         };
         xhr.send();
         </script>
-        <div class="container-fluid dalneg">                   
+        <div class="container-fluid dalneg mt-4"><br><br>                   
             <a class="dalnegtx" href="javascript:history.back()"><i class="fa-solid fa-chevron-left" style="color: #030303;">
-        </i>&ensp;Home</a>
+        </i>&ensp;Pesan</a>
         </div>
                     <!-- Mobile Menu -->
                     <div class="col-12">
@@ -58,7 +58,7 @@
             <!-- Hero End -->
             <!--?  Contact Area start  -->
             <section>
-                <h1>Pesanan</h1>
+                <h1 class="mt-4">Form Pesanan</h1>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -66,31 +66,31 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <h3 for="nama_pelanggan" class="contact-title">Nama Pelanggan</h3>
-                                            <input class="form-control" name="nama_pelanggan" id="nama_pelanggan" type="text" value="Jhon Doe" placeholder="Kemal Abdul Aziz" readonly>
+                                            <h4 for="nama_pelanggan" class="contact-title">Nama Pelanggan</h4>
+                                            <input class="form-control" name="nama_pelanggan" id="nama_pelanggan" type="text" value="Jhon Doe" placeholder="Kemal Abdul Aziz" readonly><br>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <h3 for="alamat" class="contact-title">Alamat</h3>
-                                            <input class="form-control" name="alamat" id="alamat" type="text" value="123 Main Street" placeholder="Bandung" readonly>
+                                            <h4 for="alamat" class="contact-title">Alamat</h4>
+                                            <input class="form-control" name="alamat" id="alamat" type="text" value="123 Main Street" placeholder="Bandung" readonly><br>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <h3 for="telepon" class="contact-title">Telepon</h3>
-                                            <input class="form-control" name="telepon" id="telepon" type="text" value="123-456-7890" placeholder="0897654321" readonly>
+                                            <h4 for="telepon" class="contact-title">Telepon</h4>
+                                            <input class="form-control" name="telepon" id="telepon" type="text" value="123-456-7890" placeholder="0897654321" readonly><br>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <h3 for="jenis_pelayanan" class="contact-title">Jenis Pelayanan</h3>
+                                            <h4 for="jenis_pelayanan" class="contact-title">Jenis Pelayanan</h4>
                                             <div>
                                                 <button type="button" class="btn btn-primary" onclick="selectService('Self service')" value="Self service" style="background-color: #00834c;">Self service</button>
                                                 <button type="button" class="btn btn-primary" onclick="selectService('Antar jemput')" value="Antar jemput" style="background-color: #00834c;">Antar jemput</button>
                                                 <input type="hidden" name="jenis_pelayanan" id="jenis_pelayanan">
                                             </div>
-                                        </div>
+                                        </div><br>
                                         <div id="mesin-cuci-container"></div>
                                     </div>
                                     <div class="col-12">
@@ -115,7 +115,7 @@
                                     </div>
                                     
                                     <div class="col-12">
-                                        <div class="form-group mt-3">
+                                        <div class="form-group mt-3 mb-4">
                                             <button type="submit" class="btn btn-success" >Pesan</button>
                                         </div>
                                         <br>
@@ -179,7 +179,7 @@
                     <a href="home.html" class="text-white">Home</a>
                 </p>
                 <p>
-                    <a href="service.html" class="text-white">Pelayanan</a>
+                    <a href="about.html" class="text-white">About</a>
                 </p>
                 <p>
                     <a href="price.html" class="text-white">Daftar Harga</a>
@@ -219,10 +219,9 @@
             var container = document.getElementById('mesin-cuci-container');
             container.innerHTML = '<div style="display: flex;">' +
                 '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 1"></figure>' +
-                '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 2"></figure>' +
                 '<button id="selfservice1" onclick="selectMachine(\'selfservice1\', event)" style="background-color: transparent; border: none;"><img src="assets/img/selfservice1.png" alt="Mesin Cuci 3"></button>' +
                 '<button id="selfservice2" onclick="selectMachine(\'selfservice2\', event)" style="background-color: transparent; border: none;"><img src="assets/img/selfservice1.png" alt="Mesin Cuci 4"></button>' +
-                '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci 5"></figure>' +
+                '<figure><img src="assets/img/selfservice.png" alt="Mesin Cuci "></figure>' +
                 '</div>';
         } else if (service === 'Antar jemput') {
             var container = document.getElementById('mesin-cuci-container');

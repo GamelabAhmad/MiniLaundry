@@ -22,26 +22,22 @@
         };
         xhr.send();
         </script>
-        <div class="container-fluid dalneg">                   
+        <div class="container-fluid dalneg mt-4"><br><br>                   
             <a class="dalnegtx" href="javascript:history.back()"><i class="fa-solid fa-chevron-left" style="color: #030303;">
         </i>&ensp;Contact</a>
         </div>
-
-        
-
-
         <main>
             <!-- Hero Start -->
             <!-- Hero End -->
             <!-- Area Kontak Mulai -->
-            <section class="contact-section">
+            <section class="contact-section mt-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 text-start">
                             <h2 class="contact-title">Hubungi Kami</h2>
                         </div>
                         <div class="col-lg-8">
-                            <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <form class="form-contact contact_form"  method="post">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group">
@@ -60,7 +56,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukkan Subjek Anda'" placeholder="Masukkan Subjek Anda"><br>
+                                            <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukkan Subjek Anda'" placeholder="Masukkan No.WA Anda"><br>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group mt-3">
@@ -90,19 +86,6 @@
 
 
     </body>
-
-    <div id="footer-placeholder"></div>
-        <script>
-        const footerPlaceholder = document.getElementById('footer-placeholder');
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'footer.html', true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                footerPlaceholder.innerHTML = xhr.responseText;
-            }
-        };
-        xhr.send();
-        </script>
 
     <footer
             class="text-center text-lg-start text-white"
@@ -155,7 +138,7 @@
                 <a href="home.html" class="text-white">Home</a>
             </p>
             <p>
-                <a href="service.html" class="text-white">Pelayanan</a>
+                <a href="about.html" class="text-white">About</a>
             </p>
             <p>
                 <a href="price.html" class="text-white">Daftar Harga</a>
